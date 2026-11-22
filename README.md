@@ -34,8 +34,6 @@
 - [2. Các tính năng nổi bật](#2-các-tính-năng-nổi-bật)
 - [3. Yêu cầu hệ thống](#3-yêu-cầu-hệ-thống)
 - [4. Hướng dẫn cài đặt & Khởi động](#4-hướng-dẫn-cài-đặt--khởi-động)
-  - [Cách 1: Cài đặt bằng file Installer (.dmg / .exe) (Khuyên dùng)](#cách-1-cài-đặt-bằng-file-installer-dmg--exe-khuyên-dùng)
-  - [Cách 2: Chạy trực tiếp từ mã nguồn qua Terminal / Dòng lệnh](#cách-2-chạy-trực-tiếp-từ-mã-nguồn-qua-terminal--dòng-lệnh)
 - [5. Hướng dẫn sử dụng chi tiết](#5-hướng-dẫn-sử-dụng-chi-tiết)
   - [5.1. Quản lý danh sách email](#51-quản-lý-danh-sách-email)
   - [5.2. Nhập email hàng loạt (Bulk Import)](#52-nhập-email-hàng-loạt-bulk-import)
@@ -99,34 +97,8 @@ Ngoài ra, SukiMail tích hợp **Engine Local IPv6 Proxy** tiên tiến, cho ph
 
 ## 4. Hướng dẫn cài đặt & Khởi động
 
-### Cách 1: Cài đặt bằng file Installer (.dmg / .exe) (Khuyên dùng)
-
 - **macOS:** Tải file `SukiMail.dmg`, nhấp đúp để mở rồi **kéo thả biểu tượng SukiMail vào thư mục Applications**. Sau đó mở app từ Launchpad hoặc Spotlight. Bộ cài đã đóng gói sẵn môi trường runtime độc lập, người dùng cuối không cần cài thêm Python hay thư viện dòng lệnh nào khác.
 - **Windows:** Tải file `SukiMail_Setup.exe` và làm theo hướng dẫn cài đặt trên màn hình.
-
----
-
-### Cách 2: Chạy trực tiếp từ mã nguồn qua Terminal / Dòng lệnh
-
-Nếu muốn chạy trực tiếp mã nguồn để phát triển hoặc tùy biến:
-
-```bash
-# 1. Di chuyển vào thư mục ứng dụng
-cd Documents/SukiMail/App
-
-# 2. Tạo môi trường ảo và kích hoạt
-python3 -m venv .venv
-source .venv/bin/activate   # Trên Windows: .venv\Scripts\activate
-
-# 3. Cài đặt các gói phụ thuộc
-pip install -r requirements.txt
-
-# 4. Khởi chạy ứng dụng Desktop
-export SUKIMAIL_DATA_ROOT="$(dirname "$PWD")/Data"
-python desktop_app.py
-```
-
-Ứng dụng cũng có thể truy cập trực tiếp qua trình duyệt web tại địa chỉ: `http://127.0.0.1:4751/sukimail`.
 
 ---
 

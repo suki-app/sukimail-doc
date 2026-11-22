@@ -34,8 +34,6 @@
 - [2. Key Features](#2-key-features)
 - [3. System Requirements](#3-system-requirements)
 - [4. Installation & Getting Started](#4-installation--getting-started)
-  - [Method 1: Bundled App Installer (.dmg / .exe) (Recommended)](#method-1-bundled-app-installer-dmg--exe-recommended)
-  - [Method 2: Run from Source via Terminal / CLI](#method-2-run-from-source-via-terminal--cli)
 - [5. Detailed User Guide](#5-detailed-user-guide)
   - [5.1. Email Management](#51-email-management)
   - [5.2. Bulk Email Import](#52-bulk-email-import)
@@ -99,32 +97,8 @@ Furthermore, SukiMail integrates a **Local IPv6 Proxy Engine**, tapping into you
 
 ## 4. Installation & Getting Started
 
-### Method 1: Bundled App Installer (.dmg / .exe) (Recommended)
-
 - **macOS:** Download `SukiMail.dmg`, open it, and **drag the SukiMail icon into Applications**. Open SukiMail from Launchpad. All runtime binaries and Python dependencies are pre-bundled.
 - **Windows:** Download `SukiMail_Setup.exe` and follow the setup wizard.
-
----
-
-### Method 2: Run from Source via Terminal / CLI
-
-```bash
-# 1. Navigate to App directory
-cd Documents/SukiMail/App
-
-# 2. Create and activate virtual environment
-python3 -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Launch Desktop App
-export SUKIMAIL_DATA_ROOT="$(dirname "$PWD")/Data"
-python desktop_app.py
-```
-
-The web dashboard is also accessible directly at `http://127.0.0.1:4751/sukimail`.
 
 ---
 
